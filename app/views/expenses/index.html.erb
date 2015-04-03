@@ -1,0 +1,42 @@
+
+<div class="container">
+<h1>Listing Expenses</h1>
+<table class="table table-responsive">
+	<thead>
+	  <th class="col-md-2">Category</th>
+	  <th class="col-md-2">Date</th>
+	  <th class="col-md-5">Concept</th>
+	  <th class="col-md-3">Amount</th>
+	</thead>
+
+<% @expenses.each do |expense| %>
+
+	<tr>
+	  <td><%= expense.category.name %></td>
+	  <td><%= expense.date %></td>
+	  <td><%= expense.concept %></td>
+	  <td><%= expense.amount %></td>
+	  <td>
+	  <%= link_to  expense_path(expense) do %>
+	  <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+	  <% end %>
+	  </td>
+      <td>
+      <%= link_to  edit_expense_path(expense) do %>
+      <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+		<% end %>
+      </td>
+      <td>
+      <%= link_to  expense_path(expense), method: :delete, data: { confirm: 'Estas seguro?' } do %>
+      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+      <% end %>
+
+      </td>
+	</tr>
+ <% end %>
+
+
+</table>
+ <button type="button" class="btn btn-success"><%= link_to 'Nuevo Ingreso', new_expense_path %></button>
+</div>
+

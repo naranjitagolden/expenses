@@ -1,0 +1,24 @@
+
+<p>
+	<strong>Category:</strong>
+	<%= @expense.category.name %>
+</p>
+
+<p>
+	<strong>Date:</strong>
+	<%= @expense.date %>
+
+</p>
+
+<p>
+	<strong>Concept:</strong>
+	<%= @expense.concept %>
+</p>
+
+<p>
+	<strong>Amount:</strong>
+	<%= @expense.amount %>
+</p>
+
+<%= link_to 'Volver', expenses_path %>
+<td><%= link_to 'Editar', edit_expense_path(@expense) %></td>
