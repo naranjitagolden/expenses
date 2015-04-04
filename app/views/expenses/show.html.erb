@@ -1,24 +1,42 @@
+<div class="container col-md-2">
 
-<p>
-	<strong>Category:</strong>
-	<%= @expense.category.name %>
-</p>
+<div class="panel panel-primary ">
+  <div class="panel-heading">
+    <h3 class="panel-title">Category</h3>
+  </div>
+  <div class="panel-body">
+    <%= @expense.category.name %>
+  </div>
+</div>
 
-<p>
-	<strong>Date:</strong>
-	<%= @expense.date %>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Date</h3>
+  </div>
+  <div class="panel-body">
+    <%= @expense.date %>
+  </div>
+</div>
 
-</p>
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">Concept</h3>
+  </div>
+  <div class="panel-body">
+    <%= @expense.concept %>
+  </div>
+</div>
 
-<p>
-	<strong>Concept:</strong>
-	<%= @expense.concept %>
-</p>
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">Amount</h3>
+  </div>
+  <div class="panel-body">
+    <%= @expense.amount %>
+  </div>
+</div>
 
-<p>
-	<strong>Amount:</strong>
-	<%= @expense.amount %>
-</p>
 
-<%= link_to 'Volver', expenses_path %>
-<td><%= link_to 'Editar', edit_expense_path(@expense) %></td>
+<%= link_to 'Volver', expenses_path, class: 'btn btn-success' %>
+<td><%= link_to 'Editar', edit_expense_path(@expense), class: 'btn btn-danger' %></td>
+</div>

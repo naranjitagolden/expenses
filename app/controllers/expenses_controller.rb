@@ -40,7 +40,7 @@ class ExpensesController < ApplicationController
 		@expense = Expense.find(params[:id])
 		@expense.destroy
 		
-		redirect_to expense_path
+		redirect_to expenses_path
 	end
 
 private
